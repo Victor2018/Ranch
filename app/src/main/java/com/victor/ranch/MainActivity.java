@@ -3,13 +3,18 @@ package com.victor.ranch;
 
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
+import android.view.View;
 import android.widget.TextView;
 
 import butterknife.Bind;
+import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity {
     @Bind(R.id.tv_schema)
     TextView mTvSchema;
+
+    @Bind(R.id.tv_scan)
+    TextView mTvScan;
 
     @Override
     protected int getLayoutResource() {
@@ -28,5 +33,10 @@ public class MainActivity extends BaseActivity {
 
         //必须设置否则scheme无法跳转
         mTvSchema.setMovementMethod(LinkMovementMethod.getInstance());
+    }
+
+    @OnClick(R.id.tv_scan)
+    public void OnScanClick (View v) {
+        ZXingScanCodeActivity.intentStart(this,ZXingScanCodeActivity.class);
     }
 }

@@ -222,6 +222,8 @@ dependencies {
     implementation 'com.github.Victor2018:PermissionHelper:v1.0'
     //crash日志捕获
     implementation 'com.github.Victor2018:CrashSpiderLib:v1.3'
+    //二维码扫描库
+    implementation 'com.github.Victor2018:ZxingLib:v1.9'
 
     //fastjson库
     implementation 'com.alibaba:fastjson:1.1.56.android'

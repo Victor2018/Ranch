@@ -38,6 +38,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".ZXingScanCodeActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
         <activity android:name="com.victor.crash.library.CrashActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
 
