@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Ranch</string>
+
+    <string name="loading">玩命加载中...</string>
+    <string name="no_more_data">没有更多数据</string>
+    <string name="load_completed">加载完毕</string>
+    <string name="load_failed">加载失败</string>
+
+    <string name="user_cancelled_operation">用户取消操作</string>
+    <string name="not_install_wx_tip">请先安装微信客户端</string>
+
+    <string name="my_play_free_tip">您还不是VIP会员,您可以使用激活码<a href='ranch://share?action=423099'>兑换会员</a>或选择购买下方服务</string>
+</resources>
