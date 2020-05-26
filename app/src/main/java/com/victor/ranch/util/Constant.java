@@ -1,1 +1,1 @@
-package com.victor.ranch.util;/** * Created by victor on 2015/12/25. */public class Constant {    public static class Action {        public static final int SSL_ACTION                 = 1;    }}
+package com.victor.ranch.util;/** * Created by victor on 2015/12/25. */public class Constant {    public static class Msg {        public static final int ENTER_LOGIN                                               = 0x301;    }    public static class Action {        public static final int SSL_ACTION                 = 1;    }}
