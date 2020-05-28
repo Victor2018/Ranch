@@ -1,5 +1,6 @@
 package com.victor.ranch.util;
 
+import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.ColorInt;
@@ -128,6 +129,19 @@ public class ResUtils {
     public static int getDrawableId(String name) {
         try {
             Field field = R.drawable.class.getField(name);
+            int res_ID = field.getInt(field.getName());
+            return res_ID;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return -1;
+    }
+    /**
+     * 根据图片名字获取Id
+     */
+    public static int getMipmapId(String name) {
+        try {
+            Field field = R.mipmap.class.getField(name);
             int res_ID = field.getInt(field.getName());
             return res_ID;
         } catch (Exception e) {

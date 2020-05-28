@@ -41,6 +41,9 @@ public class LoginActivity extends BaseActivity implements RadioGroup.OnCheckedC
         mTvUserAgreement.getPaint().setAntiAlias(true);//抗锯齿
 
         mRgUser.setOnCheckedChangeListener(this);
+
+        MainActivity.intentStart(this,MainActivity.class);
+        finish();
     }
 
     @Override

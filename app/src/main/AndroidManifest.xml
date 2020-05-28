@@ -34,6 +34,9 @@
             android:name=".LoginActivity"
             android:launchMode="singleTask" />
         <activity
+            android:name=".TestActivity"
+            android:launchMode="singleTask" />
+        <activity
             android:name="com.victor.crash.library.CrashActivity" />
         <!-- Scheme代理跳转 -->
         <activity

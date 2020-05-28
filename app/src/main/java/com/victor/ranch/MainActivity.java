@@ -3,28 +3,36 @@ package com.victor.ranch;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.text.TextUtils;
-import android.text.method.LinkMovementMethod;
-import android.view.View;
-import android.widget.TextView;
+import android.widget.RadioGroup;
 
 import com.luck.picture.lib.PictureSelector;
 import com.luck.picture.lib.config.PictureConfig;
 import com.luck.picture.lib.config.PictureMimeType;
 import com.luck.picture.lib.entity.LocalMedia;
+import com.victor.ranch.ui.adapter.BaseFragmentPagerAdapter;
+import com.victor.ranch.ui.fragment.HomeFragment;
+import com.victor.ranch.ui.fragment.MeFragment;
+import com.victor.ranch.ui.fragment.WorkbenchFragment;
+import com.victor.ranch.ui.widget.NoScrollViewPager;
 import com.victor.ranch.util.Loger;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
-import butterknife.OnClick;
 
-public class MainActivity extends BaseActivity {
-    @Bind(R.id.tv_schema)
-    TextView mTvSchema;
+public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener {
+    @Bind(R.id.home_vpager)
+    NoScrollViewPager mViewPager;
+
+    @Bind(R.id.rg_bottom_nav)
+    RadioGroup mRgBottomNav;
+
+    private BaseFragmentPagerAdapter homeViewPagerAdapter;
+    private List<Fragment> fragmentList = new ArrayList<>();
 
     @Override
     protected int getLayoutResource() {
@@ -40,22 +48,19 @@ public class MainActivity extends BaseActivity {
     }
 
     private void initialize () {
-        //必须设置否则scheme无法跳转
-        mTvSchema.setMovementMethod(LinkMovementMethod.getInstance());
+        fragmentList.add(HomeFragment.newInstance());
+        fragmentList.add(WorkbenchFragment.newInstance());
+        fragmentList.add(MeFragment.newInstance());
+
+        homeViewPagerAdapter = new BaseFragmentPagerAdapter(getSupportFragmentManager());
+        homeViewPagerAdapter.setFrags(fragmentList);
+
+        mViewPager.setAdapter(homeViewPagerAdapter);
+
+        mRgBottomNav.setOnCheckedChangeListener(this);
+
     }
 
-    @OnClick(R.id.tv_scan)
-    public void OnScanClick (View v) {
-        ZXingScanCodeActivity.intentStart(this,ZXingScanCodeActivity.class);
-    }
-    @OnClick(R.id.tv_picture)
-    public void OnPictureClick (View v) {
-        selectImg();
-    }
-    @OnClick(R.id.tv_my_order)
-    public void OnMyOrderClick (View v) {
-        MyOrderActivity.intentStart(this,MyOrderActivity.class);
-    }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -109,5 +114,21 @@ public class MainActivity extends BaseActivity {
                 .showCropGrid(true)// 是否显示裁剪矩形网格 圆形裁剪时建议设为false
                 .minimumCompressSize(100)// 小于100kb的图片不压缩
                 .forResult(PictureConfig.CHOOSE_REQUEST);//结果回调onActivityResult code
+    }
+
+    @Override
+    public void onCheckedChanged(RadioGroup group, int checkedId) {
+        switch (checkedId) {
+            case R.id.rb_home:
+                mViewPager.setCurrentItem(0,false);
+                break;
+            case R.id.rb_workbench:
+                mViewPager.setCurrentItem(1,false);
+                break;
+            case R.id.rb_mine:
+                mViewPager.setCurrentItem(2,false);
+//                TestActivity.intentStart(this,TestActivity.class);
+                break;
+        }
     }
 }
