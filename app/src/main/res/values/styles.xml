@@ -50,4 +50,46 @@
         <item name="tabTextColor">@color/color_99FFFFFF</item>
         <item name="tabSelectedTextColor">@color/color_E16002</item>
     </style>
+
+    <!--默认对话框样式-->
+    <style name="BaseDialog" parent="Theme.AppCompat.Light.Dialog">
+        <!--设置背景-->
+        <item name="android:windowBackground">@color/transparent</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否模糊 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--是否透明-->
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!--默认对话框样式-->
+    <style name="BaseNoTitleDialog" parent="BaseDialog">
+        <!-- 是否有标题 -->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="BottomDialogAnimShow">
+        <item name="android:windowEnterAnimation">@anim/dialog_bottom_enter</item>
+        <item name="android:windowExitAnimation">@anim/dialog_bottom_exit</item>
+    </style>
+
+    <style name="BasePopWindowStyle">
+        <item name="android:windowEnterAnimation">@anim/anim_base_popwindow_fade_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_base_popwindow_fade_out</item>
+    </style>
+
+    <style name="HorizontalDottedLineStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_3</item>
+        <item name="android:background">@drawable/horizontal_dotted_line_shape</item>
+        <item name="android:layerType">software</item>
+    </style>
+    <style name="VerticalDottedLineStyle">
+        <item name="android:layout_width">@dimen/dp_100</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/vertical_dotted_line_shape</item>
+        <item name="android:layerType">software</item>
+    </style>
+
 </resources>

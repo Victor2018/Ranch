@@ -12,4 +12,6 @@
     <string name="my_play_free_tip">您还不是VIP会员,您可以使用激活码<a href='ranch://share?action=423099'>兑换会员</a>或选择购买下方服务</string>
     <string name="scan_code_tip">将二维码放入框内扫描</string>
     <string name="cancel">取消</string>
+    <string name="consumer_hotline">200-8820-888</string>
+    <string name="call_customer_service">是否拨打客户电话：%s？</string>
 </resources>

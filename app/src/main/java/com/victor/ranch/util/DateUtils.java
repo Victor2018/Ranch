@@ -4,8 +4,10 @@ import android.text.TextUtils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 /*
@@ -205,6 +207,51 @@ public class DateUtils {
         return false;
     }
 
+    /**
+     * 在beginDate和endDate之间获取一个随机日期作为开始日期
+     * @param beginDate  日期开始范围
+     * @param endDate   日期结束范围
+     * @return 依据 开始日期和randnum 算出结算日期并返回
+     */
+
+    public static long randomStamp(String beginDate, String endDate) {
+        long date = 0;
+        try {
+            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+            Date start = format.parse(beginDate);// 构造开始日期
+            Date end = format.parse(endDate);// 构造结束日期
+            // getTime()表示返回自 1970 年 1 月 1 日 00:00:00 GMT 以来此 Date 对象表示的毫秒数。
+            if (start.getTime() >= end.getTime()) {
+                return date;
+            }
+            date = random(start.getTime(), end.getTime());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return date;
+    }
+
+    public static String formatStamp (long stamp,String formater) {
+        String result = "";
+        try {
+            SimpleDateFormat format = new SimpleDateFormat(formater);
+            result = format.format(new Date(stamp));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    private static long random(long begin, long end) {
+        long rtn = begin + (long) (Math.random() * (end - begin));
+        // 如果返回的是开始时间和结束时间，则递归调用本函数查找随机值
+        if (rtn == begin || rtn == end) {
+            return random(begin, end);
+        }
+        return rtn;
+    }
+
+
     public static SimpleDateFormat getDateFormat() {
         if (null == DateLocal.get()) {
             DateLocal.set(new SimpleDateFormat("yyyy-MM-dd", Locale.CHINA));
@@ -213,5 +260,6 @@ public class DateUtils {
     }
 
     private static ThreadLocal<SimpleDateFormat> DateLocal = new ThreadLocal<SimpleDateFormat>();
+
 
 }

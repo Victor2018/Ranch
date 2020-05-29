@@ -192,7 +192,8 @@
                     android:textColor="@color/color_03C89B"
                     android:text="去查看"/>
             </RelativeLayout>
-            <View
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/line_chart"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_528"
                 android:layout_marginTop="@dimen/dp_16"
@@ -218,8 +219,10 @@
                     android:textSize="@dimen/dp_30"
                     android:text="最新消息"/>
                 <TextView
+                    android:id="@+id/tv_more"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_10"
                     android:layout_alignParentRight="true"
                     android:drawableRight="@mipmap/ic_home_more"
                     android:drawablePadding="@dimen/dp_11"
@@ -227,10 +230,15 @@
                     android:textSize="@dimen/dp_28"
                     android:text="更多"/>
             </RelativeLayout>
+            <View
+                style="@style/HorizontalDottedLineStyle"
+                android:layout_marginLeft="@dimen/dp_31"
+                android:layout_marginRight="@dimen/dp_40"/>
             <com.victor.ranch.ui.widget.LMRecyclerView
-                android:id="@+id/rv_messge"
+                android:id="@+id/rv_news"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_359"
+                android:layout_marginTop="@dimen/dp_10"
                 android:background="@color/white"
                 app:layoutManager="LinearLayoutManager"
                 android:nestedScrollingEnabled="false"/>

@@ -5,14 +5,17 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import com.victor.ranch.ui.adapter.MyOrderViewPagerAdapter;
-import com.victor.ranch.ui.fragment.MyOrderFragment;
+import com.victor.ranch.ui.fragment.NewsCenterFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
+import butterknife.OnClick;
 
 /*
  * -----------------------------------------------------------------
@@ -24,7 +27,8 @@ import butterknife.Bind;
  * Description:
  * -----------------------------------------------------------------
  */
-public class MyOrderActivity extends BaseActivity implements ViewPager.OnPageChangeListener {
+public class NewsCenterActivity extends BaseActivity implements ViewPager.OnPageChangeListener {
+
     @Bind(R.id.tabs)
     TabLayout mTabLayout;
 
@@ -37,7 +41,7 @@ public class MyOrderActivity extends BaseActivity implements ViewPager.OnPageCha
 
     @Override
     protected int getLayoutResource() {
-        return R.layout.activity_my_order;
+        return R.layout.activity_news_center;
     }
 
     @Override
@@ -55,13 +59,19 @@ public class MyOrderActivity extends BaseActivity implements ViewPager.OnPageCha
         mTabLayout.setupWithViewPager(mViewPager);
 
         mViewPager.setOnPageChangeListener(this);
+
     }
 
     private void initData () {
         for (int i=0;i<8;i++) {
-            fragmentList.add(MyOrderFragment.newInstance());
+            fragmentList.add(NewsCenterFragment.newInstance());
             titleList.add("测试" + i);
         }
+    }
+
+    @OnClick(R.id.iv_back)
+    public void OnBackClick (View v) {
+        finish();
     }
 
     @Override

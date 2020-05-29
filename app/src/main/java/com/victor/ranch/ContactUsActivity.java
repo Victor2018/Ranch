@@ -2,33 +2,25 @@ package com.victor.ranch;
 
 
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
+import android.view.View;
 
-import com.victor.ranch.ui.adapter.MyOrderViewPagerAdapter;
-import com.victor.ranch.ui.fragment.MyOrderFragment;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import butterknife.Bind;
+import butterknife.OnClick;
 
 /*
  * -----------------------------------------------------------------
  * Copyright (C) 2018-2028, by Victor, All rights reserved.
  * -----------------------------------------------------------------
- * File: MyOrderActivity
+ * File: CustomerServiceActivity
  * Author: Victor
  * Date: 2020/5/25 上午 11:22
  * Description:
  * -----------------------------------------------------------------
  */
-public class TestActivity extends BaseActivity {
+public class ContactUsActivity extends BaseActivity {
 
     @Override
     protected int getLayoutResource() {
-        return R.layout.activity_test;
+        return R.layout.activity_contact_us;
     }
 
     @Override
@@ -36,6 +28,10 @@ public class TestActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
     }
 
+    @OnClick(R.id.iv_back)
+    public void OnBackClick(View v) {
+        finish();
+    }
 
 
 }

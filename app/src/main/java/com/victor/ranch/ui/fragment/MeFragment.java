@@ -2,8 +2,15 @@ package com.victor.ranch.ui.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.View;
 
+import com.victor.ranch.ContactUsActivity;
+import com.victor.ranch.MessageCenterActivity;
 import com.victor.ranch.R;
+import com.victor.ranch.SettingActivity;
+import com.victor.ranch.ui.dialog.CustomerServiceDialog;
+
+import butterknife.OnClick;
 
 /*
  * -----------------------------------------------------------------
@@ -33,6 +40,26 @@ public class MeFragment extends BaseFragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+    }
+
+    @OnClick(R.id.tv_customer_service)
+    public void onCustomerServiceClick(View view) {
+        CustomerServiceDialog customerServiceDialog = new CustomerServiceDialog(getActivity());
+        customerServiceDialog.show();
+    }
+
+    @OnClick(R.id.tv_contact_us)
+    public void onContactUsClick(View view) {
+        ContactUsActivity.intentStart(getActivity(), ContactUsActivity.class);
+    }
+
+    @OnClick(R.id.tv_message_center)
+    public void onMessageCenterClick(View view) {
+        MessageCenterActivity.intentStart(getActivity(),MessageCenterActivity.class);
+    }
+    @OnClick(R.id.tv_setting)
+    public void onSettingClick(View view) {
+        SettingActivity.intentStart(getActivity(),SettingActivity.class);
     }
 
     @Override
