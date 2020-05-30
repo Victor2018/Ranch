@@ -42,6 +42,12 @@
         <activity
             android:name=".SettingActivity"
             android:launchMode="singleTask"/>
+        <activity
+            android:name=".MessageNotificationActivity"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".AccountCancellationActivity"
+            android:launchMode="singleTask"/>
 
         <activity
             android:name="com.victor.crash.library.CrashActivity" />
