@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.AdapterView;
 
 import com.victor.ranch.R;
+import com.victor.ranch.WebActivity;
 import com.victor.ranch.data.NewsInfo;
 import com.victor.ranch.ui.adapter.NewsAdapter;
 import com.victor.ranch.ui.adapter.NewsCenterAdapter;
@@ -75,6 +76,6 @@ public class NewsCenterFragment extends BaseFragment implements AdapterView.OnIt
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+        WebActivity.intentStart(getContext(),"咨询中心","https://www.baidu.com/");
     }
 }

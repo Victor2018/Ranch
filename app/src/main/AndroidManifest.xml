@@ -48,6 +48,30 @@
         <activity
             android:name=".AccountCancellationActivity"
             android:launchMode="singleTask"/>
+        <activity
+            android:name=".MyWalletActivity"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".BalanceWithdrawalToActivity"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".BalanceWithdrawalActivity"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".FarmListActivity"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".ProductListActivity"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".LogListActivity"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".LiveDeviceActivity"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".WebActivity"
+            android:launchMode="singleTask"/>
 
         <activity
             android:name="com.victor.crash.library.CrashActivity" />

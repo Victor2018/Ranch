@@ -48,7 +48,7 @@
                         android:layout_centerHorizontal="true"
                         android:textSize="@dimen/dp_32"
                         android:textColor="@color/white"
-                        android:text="联系我们"/>
+                        android:text="消息中心"/>
                 </RelativeLayout>
             </android.support.v7.widget.Toolbar>
         </android.support.design.widget.CollapsingToolbarLayout>

@@ -3,6 +3,10 @@ package com.victor.ranch.ui.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
+import com.victor.ranch.FarmListActivity;
+import com.victor.ranch.LiveDeviceActivity;
+import com.victor.ranch.LogListActivity;
+import com.victor.ranch.ProductListActivity;
 import com.victor.ranch.R;
 import com.victor.ranch.data.WorkbenchData;
 import com.victor.ranch.data.WorkbenchCellData;
@@ -75,7 +79,26 @@ public class WorkbenchFragment extends BaseFragment implements
     }
 
     @Override
-    public void OnWorkbenchCelClick(WorkbenchCellData app) {
-
+    public void OnWorkbenchCelClick(WorkbenchCellData data) {
+        switch (data.id) {
+            case 11:
+                break;
+            case 12:
+                FarmListActivity.intentStart(getActivity(),FarmListActivity.class);
+                break;
+            case 21:
+                break;
+            case 22:
+                ProductListActivity.intentStart(getActivity(),ProductListActivity.class);
+                break;
+            case 31:
+                break;
+            case 32:
+                LogListActivity.intentStart(getActivity(),LogListActivity.class);
+                break;
+            case 41:
+                LiveDeviceActivity.intentStart(getActivity(),LiveDeviceActivity.class);
+                break;
+        }
     }
 }

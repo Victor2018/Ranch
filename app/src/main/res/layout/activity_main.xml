@@ -6,11 +6,17 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
+    <View
+        android:id="@+id/status_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:background="@color/color_03C89B"/>
     <com.victor.ranch.ui.widget.NoScrollViewPager
         android:id="@+id/home_vpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:overScrollMode="never"
+        android:layout_below="@+id/status_view"
         android:layout_above="@+id/rg_bottom_nav"/>
     <include
         layout="@layout/home_bottom_nav"

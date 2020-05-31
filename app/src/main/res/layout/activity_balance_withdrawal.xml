@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_620"
+        app:elevation="@dimen/dp_0"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/mCtlVideoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginStart="@dimen/dp_50"
+            app:expandedTitleMarginEnd="@dimen/dp_65"
+            app:titleEnabled="false">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_67"
+                android:layout_gravity="bottom"
+                android:background="@color/white"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_wallet"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_460"
+                android:layout_marginTop="@dimen/dp_156"
+                android:paddingLeft="@dimen/dp_33"
+                android:paddingRight="@dimen/dp_33"
+                android:layout_marginLeft="@dimen/dp_25"
+                android:layout_marginRight="@dimen/dp_25"
+                android:paddingTop="@dimen/dp_36"
+                android:background="@mipmap/img_withdrawal_header">
+
+
+                <TextView
+                    android:id="@+id/tv_withdrawal_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/dp_30"
+                    android:textColor="@color/black"
+                    android:text="提现金额："/>
+
+                <TextView
+                    android:id="@+id/tv_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_withdrawal_balance"
+                    android:layout_marginTop="@dimen/dp_61"
+                    android:textSize="@dimen/dp_30"
+                    android:textColor="@color/color_03C79B"
+                    android:text="￥"/>
+                <EditText
+                    android:id="@+id/et_balance"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_80"
+                    android:layout_below="@+id/tv_withdrawal_balance"
+                    android:layout_marginTop="@dimen/dp_40"
+                    android:background="@null"
+                    android:paddingLeft="@dimen/dp_30"
+                    android:textSize="@dimen/dp_30"
+                    android:textColor="@color/color_03C79B"
+                    android:text="adfasdf asdf asdf "/>
+
+                <View
+                    android:id="@+id/line_balance"
+                    style="@style/HorizontalDottedLineStyle"
+                    android:layout_below="@+id/et_balance"/>
+
+                <TextView
+                    android:id="@+id/tv_balance_lable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/line_balance"
+                    android:layout_marginTop="@dimen/dp_23"
+                    android:textSize="@dimen/dp_24"
+                    android:textColor="@color/color_8B8B8B"
+                    android:text="当前余额8888元"/>
+
+                <TextView
+                    android:id="@+id/tv_service_amt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_balance_lable"
+                    android:layout_marginTop="@dimen/dp_9"
+                    android:textSize="@dimen/dp_24"
+                    android:textColor="@color/color_8B8B8B"
+                    android:text="*服务费：0.11元"/>
+
+                <Button
+                    android:id="@+id/btn_withdrawal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_70"
+                    android:layout_marginTop="@dimen/dp_25"
+                    android:layout_below="@+id/tv_service_amt"
+                    android:background="@drawable/bg_login_btn"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dp_30"
+                    android:text="提现"/>
+
+                <TextView
+                    android:id="@+id/tv_balance_l"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btn_withdrawal"
+                    android:layout_marginTop="@dimen/dp_23"
+                    android:textSize="@dimen/dp_24"
+                    android:textColor="@color/color_8B8B8B"
+                    android:text="12小时内到账"/>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/transparent"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:title=""
+                app:layout_collapseMode="pin" >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/iv_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp_10"
+                        android:src="@mipmap/ic_left"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="@dimen/dp_32"
+                        android:textColor="@color/white"
+                        android:text="余额提现"/>
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

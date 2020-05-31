@@ -17,6 +17,7 @@ import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.ValueFormatter;
 import com.victor.ranch.NewsCenterActivity;
 import com.victor.ranch.R;
+import com.victor.ranch.WebActivity;
 import com.victor.ranch.data.NewsInfo;
 import com.victor.ranch.ui.adapter.NewsAdapter;
 import com.victor.ranch.ui.widget.LMRecyclerView;
@@ -222,6 +223,7 @@ public class HomeFragment extends BaseFragment implements AdapterView.OnItemClic
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        WebActivity.intentStart(getContext(),"咨询中心","https://www.baidu.com/");
 
     }
 

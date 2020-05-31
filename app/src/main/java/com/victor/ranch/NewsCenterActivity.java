@@ -21,7 +21,7 @@ import butterknife.OnClick;
  * -----------------------------------------------------------------
  * Copyright (C) 2018-2028, by Victor, All rights reserved.
  * -----------------------------------------------------------------
- * File: MyOrderActivity
+ * File: NewsCenterActivity
  * Author: Victor
  * Date: 2020/5/25 上午 11:22
  * Description:

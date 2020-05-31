@@ -6,6 +6,7 @@ import android.view.View;
 
 import com.victor.ranch.ContactUsActivity;
 import com.victor.ranch.MessageCenterActivity;
+import com.victor.ranch.MyWalletActivity;
 import com.victor.ranch.R;
 import com.victor.ranch.SettingActivity;
 import com.victor.ranch.ui.dialog.CustomerServiceDialog;
@@ -40,6 +41,11 @@ public class MeFragment extends BaseFragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+    }
+
+    @OnClick(R.id.rl_wallet)
+    public void onWalletClick(View view) {
+        MyWalletActivity.intentStart(getActivity(),MyWalletActivity.class);
     }
 
     @OnClick(R.id.tv_customer_service)

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/dp_22"
+    android:paddingBottom="@dimen/dp_28"
+    android:background="@drawable/bg_dlg_customer_service"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="@dimen/dp_32"
+        android:textColor="@color/black"
+        android:text="提现" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_29"
+        android:gravity="center"
+        android:text="￥8888.00"
+        android:textColor="@color/color_03C79B"
+        android:textSize="@dimen/dp_28" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_23"
+        android:paddingLeft="@dimen/dp_47"
+        android:paddingRight="@dimen/dp_31"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dp_24"
+            android:textColor="@color/color_8B8B8B"
+            android:text="服务费："/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|right"
+            android:textSize="@dimen/dp_24"
+            android:textColor="@color/color_8B8B8B"
+            android:text="￥0.01元"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_23"
+        android:paddingLeft="@dimen/dp_47"
+        android:paddingRight="@dimen/dp_31"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dp_24"
+            android:textColor="@color/color_8B8B8B"
+            android:text="费率："/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|right"
+            android:textSize="@dimen/dp_24"
+            android:textColor="@color/color_8B8B8B"
+            android:text="0.01％"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_23"
+        android:paddingLeft="@dimen/dp_47"
+        android:paddingRight="@dimen/dp_31"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dp_26"
+            android:textColor="@color/black"
+            android:text="预计到账金额："/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|right"
+            android:textSize="@dimen/dp_26"
+            android:textColor="@color/color_03C79B"
+            android:text="￥8887.99"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="@dimen/dp_343"
+        android:layout_height="@dimen/dp_70"
+        android:layout_marginLeft="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_38"
+        android:layout_below="@+id/et_code"
+        android:background="@drawable/bg_login_btn"
+        android:textColor="@color/color_F3F3F3"
+        android:textSize="@dimen/dp_30"
+        android:text="确认"/>
+
+
+</LinearLayout>
