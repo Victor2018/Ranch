@@ -37,18 +37,18 @@
         <item name="android:background">@color/color_D3D3D3</item>
     </style>
 
-    <style name="MyOrderTabTextAppearance" parent="TextAppearance.Design.Tab">
-        <item name="android:textSize">@dimen/dp_32</item>
+    <style name="NewsCenterTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/dp_30</item>
         <item name="textAllCaps">false</item>
     </style>
 
-    <style name="MyOrderTabStyle" parent="Widget.Design.TabLayout">
-        <item name="tabIndicatorColor">@color/color_E16002</item>
-        <item name="tabIndicatorHeight">@dimen/dp_7</item>
+    <style name="NewsCenterTabStyle" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/color_03C89B</item>
+        <item name="tabIndicatorHeight">@dimen/dp_6</item>
         <item name="tabBackground">?attr/selectableItemBackground</item>
-        <item name="tabTextAppearance">@style/MyOrderTabTextAppearance</item>
-        <item name="tabTextColor">@color/color_99FFFFFF</item>
-        <item name="tabSelectedTextColor">@color/color_E16002</item>
+        <item name="tabTextAppearance">@style/NewsCenterTabTextAppearance</item>
+        <item name="tabTextColor">@color/color_8C8C8C</item>
+        <item name="tabSelectedTextColor">@color/color_03C89B</item>
     </style>
 
     <!--默认对话框样式-->
