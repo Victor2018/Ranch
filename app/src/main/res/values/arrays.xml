@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="farm_list">
+		<item>健康运动</item>
+		<item>社交聚会</item>
+		<item>我是吃货</item>
+		<item>看电影</item>
+		<item>玩游戏</item>
+		<item>旅行休闲</item>
+		<item>陪我购物</item>
+		<item>连麦聊天</item>
+		<item>其他</item>
+    </string-array>
+
+</resources>

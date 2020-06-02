@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:paddingTop="@dimen/dp_22"
     android:paddingBottom="@dimen/dp_28"
-    android:background="@drawable/bg_dlg_customer_service"
+    android:background="@drawable/bg_white_radius_15"
     android:gravity="center"
     android:orientation="vertical">
 

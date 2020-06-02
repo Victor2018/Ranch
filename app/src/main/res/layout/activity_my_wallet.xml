@@ -42,8 +42,6 @@
                 android:paddingTop="@dimen/dp_39"
                 android:background="@mipmap/img_my_header">
 
-
-
                 <TextView
                     android:id="@+id/tv_balance"
                     android:layout_width="wrap_content"

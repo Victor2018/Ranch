@@ -61,8 +61,16 @@
             android:name=".FarmListActivity"
             android:launchMode="singleTask"/>
         <activity
+            android:name=".PostGoodsActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
             android:name=".ProductListActivity"
             android:launchMode="singleTask"/>
+        <activity
+            android:name=".PostLogActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
         <activity
             android:name=".LogListActivity"
             android:launchMode="singleTask"/>
