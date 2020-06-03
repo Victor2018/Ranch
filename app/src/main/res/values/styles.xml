@@ -92,4 +92,13 @@
         <item name="android:layerType">software</item>
     </style>
 
+    <!-- spinner -->
+    <style name="spinner_style">
+        <item name="android:background">@drawable/bg_spinner_selector</item>
+        <item name="android:width">@dimen/dp_70</item>
+        <item name="android:entries">@array/farm_list</item>
+        <item name="android:dropDownVerticalOffset">@dimen/dp_70</item>
+        <item name="android:dropDownHorizontalOffset">@dimen/dp_30</item>
+    </style>
+
 </resources>

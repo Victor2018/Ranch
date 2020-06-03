@@ -42,9 +42,13 @@ public class PostGoodsActivity extends BaseActivity implements AdapterView.OnIte
     private void initialize () {
         // 建立数据源
         String[] mItems = getResources().getStringArray(R.array.farm_list);
-        // 建立Adapter并且绑定数据源
-        ArrayAdapter<String> adapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, mItems);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        //建立Adapter并且绑定数据源
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                R.layout.simple_spinner_item, mItems);
+        //设置下拉样式以后显示的样式
+        adapter.setDropDownViewResource(R.layout.my_drop_down_item);
+
         //绑定 Adapter到控件
         mSpinnerFarm.setAdapter(adapter);
         mSpinnerFarm.setOnItemSelectedListener(this);
