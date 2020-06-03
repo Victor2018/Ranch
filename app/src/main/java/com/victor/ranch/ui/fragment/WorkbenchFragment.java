@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import com.victor.ranch.FarmListActivity;
 import com.victor.ranch.LiveDeviceActivity;
 import com.victor.ranch.LogListActivity;
+import com.victor.ranch.MyOrderActivity;
 import com.victor.ranch.PostGoodsActivity;
 import com.victor.ranch.PostLogActivity;
 import com.victor.ranch.ProductListActivity;
@@ -103,6 +104,18 @@ public class WorkbenchFragment extends BaseFragment implements
                 break;
             case 41:
                 LiveDeviceActivity.intentStart(getActivity(),LiveDeviceActivity.class);
+                break;
+            case 51:
+                MyOrderActivity.intentStart(getActivity(),1);
+                break;
+            case 52:
+                MyOrderActivity.intentStart(getActivity(),2);
+                break;
+            case 53:
+                MyOrderActivity.intentStart(getActivity(),3);
+                break;
+            case 54:
+                MyOrderActivity.intentStart(getActivity(),4);
                 break;
         }
     }

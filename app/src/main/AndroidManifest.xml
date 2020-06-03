@@ -78,6 +78,9 @@
             android:name=".LiveDeviceActivity"
             android:launchMode="singleTask"/>
         <activity
+            android:name=".MyOrderActivity"
+            android:launchMode="singleTask"/>
+        <activity
             android:name=".WebActivity"
             android:launchMode="singleTask"/>
 

@@ -1,6 +1,8 @@
 package com.victor.ranch;
 
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -8,7 +10,9 @@ import android.support.v4.view.ViewPager;
 import android.view.View;
 
 import com.victor.ranch.ui.adapter.ViewPagerAdapter;
+import com.victor.ranch.ui.fragment.MyOrderFragment;
 import com.victor.ranch.ui.fragment.NewsCenterFragment;
+import com.victor.ranch.util.AppUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,14 +24,14 @@ import butterknife.OnClick;
  * -----------------------------------------------------------------
  * Copyright (C) 2018-2028, by Victor, All rights reserved.
  * -----------------------------------------------------------------
- * File: NewsCenterActivity
+ * File: MyOrderActivity
  * Author: Victor
  * Date: 2020/5/25 上午 11:22
  * Description:
  * -----------------------------------------------------------------
  */
-public class NewsCenterActivity extends BaseActivity implements ViewPager.OnPageChangeListener {
-
+public class MyOrderActivity extends BaseActivity implements ViewPager.OnPageChangeListener {
+    private final static String PAGE_INDEX_KEY = "PAGE_INDEX_KEY";
     @Bind(R.id.tabs)
     TabLayout mTabLayout;
 
@@ -37,10 +41,18 @@ public class NewsCenterActivity extends BaseActivity implements ViewPager.OnPage
     private ViewPagerAdapter mViewPagerAdapter;
     private List<Fragment> fragmentList = new ArrayList<>();
     private List<String> titleList = new ArrayList<>();
+    private int pageIndex;
+
+    public static void intentStart(Context ctx, int pageIndex) {
+        if (ctx == null) return;
+        Intent intent = new Intent(ctx, MyOrderActivity.class);
+        intent.putExtra(PAGE_INDEX_KEY,pageIndex);
+        AppUtil.launchApp(ctx, intent);
+    }
 
     @Override
     protected int getLayoutResource() {
-        return R.layout.activity_news_center;
+        return R.layout.activity_my_order;
     }
 
     @Override
@@ -58,13 +70,15 @@ public class NewsCenterActivity extends BaseActivity implements ViewPager.OnPage
         mTabLayout.setupWithViewPager(mViewPager);
 
         mViewPager.setOnPageChangeListener(this);
-
+        mViewPager.setCurrentItem(pageIndex);
     }
 
     private void initData () {
-        for (int i=0;i<8;i++) {
-            fragmentList.add(NewsCenterFragment.newInstance());
-            titleList.add("测试" + i);
+        pageIndex = getIntent().getIntExtra(PAGE_INDEX_KEY,0);
+        String[] titles = getResources().getStringArray(R.array.my_order_title);
+        for (int i=0;i<titles.length;i++) {
+            fragmentList.add(MyOrderFragment.newInstance());
+            titleList.add(titles[i]);
         }
     }
 

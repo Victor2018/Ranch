@@ -8,7 +8,7 @@ import android.widget.AdapterView;
 import com.victor.ranch.R;
 import com.victor.ranch.WebActivity;
 import com.victor.ranch.data.NewsInfo;
-import com.victor.ranch.ui.adapter.NewsAdapter;
+import com.victor.ranch.ui.adapter.MyOrderAdapter;
 import com.victor.ranch.ui.adapter.NewsCenterAdapter;
 import com.victor.ranch.ui.widget.LMRecyclerView;
 
@@ -18,20 +18,20 @@ import butterknife.Bind;
  * -----------------------------------------------------------------
  * Copyright (C) 2018-2028, by Victor, All rights reserved.
  * -----------------------------------------------------------------
- * File: NewsCenterFragment
+ * File: MyOrderFragment
  * Author: Victor
  * Date: 2020/5/25 上午 10:42
  * Description:
  * -----------------------------------------------------------------
  */
-public class NewsCenterFragment extends BaseFragment implements AdapterView.OnItemClickListener {
-    @Bind(R.id.rv_news_center)
-    LMRecyclerView mRvNewsCenter;
+public class MyOrderFragment extends BaseFragment implements AdapterView.OnItemClickListener {
+    @Bind(R.id.rv_my_order)
+    LMRecyclerView mRvMyOrder;
 
-    private NewsCenterAdapter mNewsCenterAdapter;
+    private MyOrderAdapter mMyOrderAdapter;
 
-    public static NewsCenterFragment newInstance () {
-        NewsCenterFragment fragment = new NewsCenterFragment();
+    public static MyOrderFragment newInstance () {
+        MyOrderFragment fragment = new MyOrderFragment();
 //        Bundle bundle = new Bundle();
 //        bundle.putSerializable(Constant.INTENT_DATA_KEY,data);
 //        fragment.setArguments(bundle);
@@ -49,7 +49,7 @@ public class NewsCenterFragment extends BaseFragment implements AdapterView.OnIt
 
     @Override
     protected int getLayoutResource() {
-        return R.layout.frag_news_center;
+        return R.layout.frag_my_order;
     }
 
     @Override
@@ -60,18 +60,18 @@ public class NewsCenterFragment extends BaseFragment implements AdapterView.OnIt
     }
 
     private void initialize () {
-        mNewsCenterAdapter = new NewsCenterAdapter(getActivity(),this);
-        mNewsCenterAdapter.setHeaderVisible(false);
-        mNewsCenterAdapter.setFooterVisible(false);
-        mNewsCenterAdapter.setEndTextColor(R.color.color_BDBDBD);
-        mRvNewsCenter.setAdapter(mNewsCenterAdapter);
+        mMyOrderAdapter = new MyOrderAdapter(getActivity(),this);
+        mMyOrderAdapter.setHeaderVisible(false);
+        mMyOrderAdapter.setFooterVisible(false);
+        mMyOrderAdapter.setEndTextColor(R.color.color_BDBDBD);
+        mRvMyOrder.setAdapter(mMyOrderAdapter);
     }
 
     private void initData () {
         for (int i=0;i<8;i++) {
-            mNewsCenterAdapter.add(new NewsInfo());
+            mMyOrderAdapter.add(new NewsInfo());
         }
-        mNewsCenterAdapter.notifyDataSetChanged();
+        mMyOrderAdapter.notifyDataSetChanged();
     }
 
     @Override
