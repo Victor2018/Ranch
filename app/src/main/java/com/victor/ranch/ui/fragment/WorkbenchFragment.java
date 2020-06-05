@@ -3,6 +3,7 @@ package com.victor.ranch.ui.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
+import com.victor.ranch.CertificationApplicationActivity;
 import com.victor.ranch.FarmListActivity;
 import com.victor.ranch.LiveDeviceActivity;
 import com.victor.ranch.LogListActivity;
@@ -85,7 +86,7 @@ public class WorkbenchFragment extends BaseFragment implements
     public void OnWorkbenchCelClick(WorkbenchCellData data) {
         switch (data.id) {
             case 11:
-
+                CertificationApplicationActivity.intentStart(getActivity(),CertificationApplicationActivity.class);
                 break;
             case 12:
                 FarmListActivity.intentStart(getActivity(),FarmListActivity.class);
