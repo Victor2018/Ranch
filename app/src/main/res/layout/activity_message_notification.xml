@@ -35,7 +35,8 @@
                 app:layout_collapseMode="pin" >
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp_30">
                     <ImageView
                         android:id="@+id/iv_back"
                         android:layout_width="wrap_content"
@@ -89,6 +90,7 @@
                     android:textSize="@dimen/dp_30"
                     android:text="接收新消息通知"/>
                 <Switch
+                    style="@style/switch_style"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -107,6 +109,7 @@
                     android:textSize="@dimen/dp_30"
                     android:text="通知显示消息详情"/>
                 <Switch
+                    style="@style/switch_style"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -138,6 +141,7 @@
                     android:textSize="@dimen/dp_30"
                     android:text="允许发声"/>
                 <Switch
+                    style="@style/switch_style"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -156,6 +160,7 @@
                     android:textSize="@dimen/dp_30"
                     android:text="允许振动"/>
                 <Switch
+                    style="@style/switch_style"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"

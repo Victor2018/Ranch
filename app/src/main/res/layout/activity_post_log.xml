@@ -35,7 +35,8 @@
                 app:layout_collapseMode="pin" >
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp_30">
                     <ImageView
                         android:id="@+id/iv_back"
                         android:layout_width="wrap_content"
@@ -54,7 +55,7 @@
                         android:layout_height="@dimen/dp_48"
                         android:layout_alignParentRight="true"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginRight="@dimen/dp_36"
+                        android:layout_marginRight="@dimen/dp_10"
                         android:background="@drawable/bg_yellow_shape_radius_24"
                         android:gravity="center"
                         android:textSize="@dimen/dp_28"
